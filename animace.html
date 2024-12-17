@@ -11,12 +11,19 @@
             border: 2px solid black;
             translate: 800px 500px;
             background-color: black;
+            animation: baze 2s forwards;
         }
 
         .play {
             height: 100px;
             width: 50px;
             translate: 800px 500px;
+        }
+
+        @keyframes baze {
+            100% {
+                transform: scaleX(2);
+            }
         }
     </style>
 </head>
