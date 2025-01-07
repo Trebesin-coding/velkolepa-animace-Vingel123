@@ -33,27 +33,41 @@
             font-weight: 200;
             position: absolute;
             translate: 700px 25px;
+            animation: tlacitko 2s infinite;
             &:hover {
-                color: aqua;
+                color: violet;
             }
-            
         }
-            
+
+
+          @keyframes tlacitko {
+            20% {
+                transition: green 0.5s;
+            }
+
+            40% {
+                transition: yellow 0.5s;
+            }
+
+            60% {
+                transition: blue 0.5s;
+            }
+
+            80% {
+                transition: red 0.5s;
+            }
+
+            100% {
+                transition: purple 0.5s;
+            }
+        } 
+
         @keyframes baze {
             100% {
                 transform: scaleX(2);
             }
         }
-
-        /* @keyframes baze2 {
-            50% {
-                translate: 20px 0;
-                
-            }
-            100% {
-                translate: -20px 0;
-            }
-        } */
+      
 
        
     </style>
@@ -62,5 +76,23 @@
     <img class="play" src="img/robot-296532_1280.png" alt="">
     <div class="base"></div>
     <button class="tlac">PLAY!</button>
+
+    <script>
+        let tlacitko = document.querySelector(".tlac")
+        
+        
+        tlacitko.addEventListener("click", function() {
+            let condition = "click";
+
+            if (condition === "click") {
+            tlacitko.style.display = "none";
+            } else if (condition === "invisible") {
+            tlacitko.style.visibility = "hidden";
+            } 
+        });
+
+    
+
+    </script>
 </body>
 </html>
