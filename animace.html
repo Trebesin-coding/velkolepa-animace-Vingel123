@@ -22,6 +22,11 @@
             height: 100px;
             width: 50px;
             translate: 800px 500px;
+            animation: transform 1s ease;
+        }
+
+        .move {
+            transform: translate(800px 600px);
         }
 
         .tlac {
@@ -56,6 +61,7 @@
 
     <script>
         let tlacitko = document.querySelector(".tlac")
+        let robot = document.querySelector(".play")
         
         
         tlacitko.addEventListener("click", function() {
@@ -66,15 +72,13 @@
             } else if (condition === "invisible") {
             tlacitko.style.visibility = "hidden";
             } 
-        window.addEventListener("click", function() {
-            let class = setInterval(frame, 5);
-            function frame() {
-                if ()
-            }
-        })
         });
 
-    
+        function moveRobot() {
+            robot.classList.add(".move");
+        }
+        
+        robot.addEventListener("click", moveRobot);
 
     </script>
 </body>
